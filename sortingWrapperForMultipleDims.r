@@ -1,12 +1,10 @@
 #goodSort
-glob <<- 2
  goodSort <- function(sortable,key,reverse=FALSE){
    if(missing(key)){
      return(sort(sortable,reverse))
    }
    sortableExtract <- vector()
    for (entry in sortable){
-     glob <<- key(entry)
      sortableExtract <- append(sortableExtract,key(entry))
    }
   
